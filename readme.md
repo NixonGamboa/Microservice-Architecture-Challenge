@@ -11,7 +11,7 @@
 
 
 
-## 2. Configuracion del entorno
+## 2. Configurar el entorno
 
 * Descargar los repositorios de los microservicios:
     ```shell script
@@ -20,10 +20,10 @@
     ```shell script
     git clone https://github.com/NixonGamboa/ms-accounting-transaction-challenge.git
     ``` 
-* Configurar los archivos aplication.yaml de cada uno de los modulos segun se requiera
+> **Nota:** Configurar los archivos aplication.yaml de cada uno de los modulos segun se requiera.
 
 
-## 3. Compilando y desplegando el Sistema
+## 3. Compilar y desplegar el Sistema
 
 * Compilar el ms-users: 
     ```shell script
@@ -45,10 +45,11 @@
     podman compose up
     ``` 
 
-## 4. Probando la aplicacion
+## 4. Probar la aplicacion
 
 > **Nota:** Si la configuracion de la base de datos en `application-oracle-env.yaml` establece la propiedad
-> `hibernate.ddl-auto: none` o cualquiera del mismo comportaiento, es probable que requiera ejecutar manuealmente en su base de datos el siguiente script:
+> `hibernate.ddl-auto: none` o cualquiera de similar comportamiento, es probable que requiera ejecutar manuealmente en su base de datos el siguiente script:
+>
 > `script01_create_tables.sql`
 
 
