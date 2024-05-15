@@ -18,10 +18,13 @@
     git clone https://github.com/NixonGamboa/ms-users-challenge.git
     ```
     ```shell script
-    git clone https://github.com/NixonGamboa/ms-accounting-transaction-challenge.git
+    git clone https://github.com/NixonGamboa/ms-accounting-transactions-challenge.git
     ``` 
 > **Nota:** Configurar los archivos aplication.yaml de cada uno de los modulos segun se requiera.
 
+ #### Puede acceder directamente a los repositorios de *GitHub* desde aqui:
+-  [***ms-users-challenge***](https://github.com/NixonGamboa/ms-users-challenge.git)
+-  [***ms-accounting-transactions-challenge***](https://github.com/NixonGamboa/ms-accounting-transactions-challenge.git)
 
 ## 3. Compilar y desplegar el Sistema
 
@@ -50,10 +53,9 @@
 > **Nota:** Si la configuracion de la base de datos en `application-oracle-env.yaml` establece la propiedad
 > `hibernate.ddl-auto: none` o cualquiera de similar comportamiento, es probable que requiera ejecutar manuealmente en su base de datos el siguiente script:
 >
-> `script01_create_tables.sql`
+> * [***script01_create_tables.sql***](script01_create_tables.sql)
 
 
-Puede importar en Postman las colecciones de ejemplo para cada microservicio desde los archivos:
-* ***ms-users-challenge.postman_collection.json***
-* ***ms-accounting-transactions-challenge.postman_collection.json***
-
+> **Nota:** Puede importar en Postman las colecciones de ejemplo para cada microservicio desde los archivos:
+> * [***ms-users-challenge.postman_collection***](ms-users-challenge.postman_collection.json)
+> * [***ms-accounting-transactions-challenge.postman_collection***](ms-accounting-transactions-challenge.postman_collection.json)
