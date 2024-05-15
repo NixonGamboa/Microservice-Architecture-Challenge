@@ -1,4 +1,4 @@
-# Sistema de gestion de cuentas y usuarios
+# Sistema de Gestion de Cuentas y Usuarios
 ![java-toolkit](https://img.shields.io/badge/Java17-Toolkit-important?logo=java)
 ![java-toolkit](https://img.shields.io/badge/Oracle-SQL-blue)
 ![java-toolkit](https://img.shields.io/badge/Gradle-Build-yellow)
