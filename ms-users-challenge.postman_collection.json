@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "ca245c6a-6c2d-4a39-8219-e9e0b4788f15",
+		"name": "ms-users-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29713537"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Nixon Gamboa\",\r\n  \"gender\": \"MALE\",\r\n  \"age\": 30,\r\n  \"identificationNumber\": \"ABC123456\",\r\n  \"address\": \"123 Main Street\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"password\": \"secretpassword\",\r\n  \"status\": true,\r\n  \"clientId\": \"client123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\":2,\r\n  \"name\": \"Actualizadito\",\r\n  \"gender\": \"FEMALE\",\r\n  \"age\": 30,\r\n  \"identificationNumber\": \"ABC123456\",\r\n  \"address\": \"123 Main Street\",\r\n  \"phoneNumber\": \"+1234567890\",\r\n  \"password\": \"otherpassword\",\r\n  \"status\": false,\r\n  \"clientId\": \"client123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/clientes/250",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes",
+						"250"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/service-check",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"service-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "betBy Numero identificacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/clientes/1075302469",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"clientes",
+						"1075302469"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "6bdb8f42-50f0-44d5-991f-5c1b30c161bb",
+		"name": "ms-accounting-transactions-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29713537"
+	},
+	"item": [
+		{
+			"name": "service-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/service-check",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"service-check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountNumber\": 987654337,\r\n  \"type\": \"SAVINGS\",\r\n  \"initialBalance\": 1000,\r\n  \"status\": true,\r\n  \"clientId\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/cuentas",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit-account",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/cuentas/5?status=true&type=SAVINGS",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"cuentas",
+						"5"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "true"
+						},
+						{
+							"key": "type",
+							"value": "SAVINGS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar cuenta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/cuentas/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"cuentas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar-movimiento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountId\": 1,\r\n  \"date\": \"2022-04-06T10:15:30\",\r\n  \"type\": \"deposit\",\r\n  \"value\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8084/movimientos",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelar movimiento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/movimientos/102",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"movimientos",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reporte",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8084/reportes?client_identification=1&fecha_inicial=2022-04-06T10:15:40&fecha_final=2022-04-06T10:16:00",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "client_identification",
+							"value": "1"
+						},
+						{
+							"key": "fecha_inicial",
+							"value": "2022-04-06T10:15:40"
+						},
+						{
+							"key": "fecha_final",
+							"value": "2022-04-06T10:16:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
